@@ -23,15 +23,15 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if (xpOrbPrefab != null)
-        {
-            Instantiate(xpOrbPrefab, transform.position, Quaternion.identity);
-        }
-
         health -= dmg;
         if (health <= 0)
         {
+            if (xpOrbPrefab != null)
+            {
+                Instantiate(xpOrbPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
+
 }
