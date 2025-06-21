@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text timerText;
     public GameObject winPanel;
 
+    void Start()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("GameManager started. Time.timeScale = " + Time.timeScale);
+    }
 
 
     void Update()
@@ -43,7 +48,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("SampleScene");
     }
 
 }
