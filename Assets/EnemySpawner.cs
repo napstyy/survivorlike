@@ -11,6 +11,11 @@ public class EnemySpawner : MonoBehaviour
 
     private Transform player;
 
+
+    public GameObject bossPrefab;
+    public float bossSpawnTime = 90f;
+    private bool bossSpawned = false;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
@@ -21,10 +26,16 @@ public class EnemySpawner : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
 
-        // Unlock stronger enemies over time
-        if (elapsedTime > 60f) maxEnemyTier = 1;
-        if (elapsedTime > 120f) maxEnemyTier = 2;
+        if (elapsedTime > 30f) maxEnemyTier = 1;
+        if (elapsedTime > 60f) maxEnemyTier = 2;
+
+        if (!bossSpawned && elapsedTime >= bossSpawnTime)
+        {
+            SpawnBoss();
+            bossSpawned = true;
+        }
     }
+
 
     void SpawnEnemy()
     {
@@ -40,5 +51,17 @@ public class EnemySpawner : MonoBehaviour
         int tier = Random.Range(0, Mathf.Clamp(maxEnemyTier + 1, 1, enemyPrefabs.Length));
         Instantiate(enemyPrefabs[tier], spawnPos, Quaternion.identity);
     }
+
+    void SpawnBoss()
+    {
+        if (player == null) return;
+
+        Vector2 randomDir = Random.insideUnitCircle.normalized;
+        Vector2 spawnPos = (Vector2)player.position + randomDir * (spawnDistance + 2f); // spawn farther
+
+        Instantiate(bossPrefab, spawnPos, Quaternion.identity);
+        Debug.Log("Boss Spawned!");
+    }
+
 
 }

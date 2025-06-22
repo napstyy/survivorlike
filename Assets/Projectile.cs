@@ -8,6 +8,9 @@ public class Projectile : MonoBehaviour
 
     private Vector2 direction;
 
+
+
+
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
@@ -19,18 +22,20 @@ public class Projectile : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
             Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-            }
+            Boss boss = other.GetComponent<Boss>();
+
+            if (enemy != null) enemy.TakeDamage(damage);
+            else if (boss != null) boss.TakeDamage(damage);
+
             Destroy(gameObject);
         }
     }
+
 
     public void SetDamage(int dmg)
     {

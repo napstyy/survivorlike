@@ -444,6 +444,8 @@ MonoBehaviour:
   - {fileID: 8111352266433199560, guid: a89464eb5c675fc4c96cc55bb8fdb8c9, type: 3}
   spawnInterval: 0.5
   spawnDistance: 10
+  bossPrefab: {fileID: 6140227580883264298, guid: 1c76567a81544ab41bcf1cb458ad6a5d, type: 3}
+  bossSpawnTime: 2
 --- !u!4 &202789077
 Transform:
   m_ObjectHideFlags: 0
