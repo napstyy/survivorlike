@@ -440,8 +440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 1977243363413870525, guid: a89464eb5c675fc4c96cc55bb8fdb8c9, type: 3}
-  - {fileID: 1977243363413870525, guid: a89464eb5c675fc4c96cc55bb8fdb8c9, type: 3}
+  - {fileID: 1977243363413870525, guid: 31a4f982616dcbd41ae009db72acfbde, type: 3}
+  - {fileID: 8111352266433199560, guid: a89464eb5c675fc4c96cc55bb8fdb8c9, type: 3}
   spawnInterval: 0.5
   spawnDistance: 10
 --- !u!4 &202789077

@@ -188,6 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f9bc74ed48e324eb6b2c775b2b7c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  moveSpeed: 2
+  health: 1
+  moveSpeed: 3
   xpOrbPrefab: {fileID: 2146135240923901073, guid: aaa5e54df3da2ab4096b20e37a5a4875, type: 3}
