@@ -9,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
 
     public Slider healthBar;
 
+    public GameObject gameOverPanel;
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -38,9 +41,14 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died.");
+        Time.timeScale = 0f;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
     }
+
 
 
 }

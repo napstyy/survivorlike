@@ -439,7 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e8116252daace44802cd18dd775cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1977243363413870525, guid: 31a4f982616dcbd41ae009db72acfbde, type: 3}
+  enemyPrefabs:
+  - {fileID: 1977243363413870525, guid: a89464eb5c675fc4c96cc55bb8fdb8c9, type: 3}
+  - {fileID: 1977243363413870525, guid: a89464eb5c675fc4c96cc55bb8fdb8c9, type: 3}
   spawnInterval: 0.5
   spawnDistance: 10
 --- !u!4 &202789077
@@ -2314,7 +2316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151, y: 329}
+  m_AnchoredPosition: {x: 315, y: 215}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296699029
@@ -2445,7 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4dfb321c82ae854f94637c09eefc635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surviveTime: 5
+  surviveTime: 120
   timerText: {fileID: 2020954138}
   winPanel: {fileID: 157702262}
 --- !u!4 &1495828587
@@ -2825,6 +2827,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   healthBar: {fileID: 105853496}
+  gameOverPanel: {fileID: 632549814}
 --- !u!1 &2020954137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,8 +3239,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 1864122582}
-  - {fileID: 202789077}
   - {fileID: 1176570888}
   - {fileID: 584960560}
   - {fileID: 186988833}
   - {fileID: 1495828587}
+  - {fileID: 202789077}
