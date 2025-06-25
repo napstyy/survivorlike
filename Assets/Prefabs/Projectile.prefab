@@ -167,3 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lifetime: 2
+  damage: 1
+  defaultDirection: {x: 1, y: 0}
