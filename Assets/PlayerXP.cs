@@ -23,7 +23,7 @@ public class PlayerXP : MonoBehaviour
 
         Debug.Log("Level Up! Now level " + currentLevel);
 
-        FindObjectOfType<UpgradeManager>().ShowUpgrades();
+        //FindObjectOfType<UpgradeManager>().ShowUpgrades();
     }
 
 }
